@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Container Example</title>
+<h>
+    <style>
+        /*Flex Container*/
+        .container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            align-content: center;
+            gap: 20px;
+
+            height: 400px;
+            padding: 20px;
+            border: 2px solid #0cdee1;
+            background-color: bisque;
+        }
+
+        /*Flex Container*/
+        .item{
+            width: 120px;
+            height: 100px;
+            background-color: azure;
+            color: rgb(17, 26, 26);
+            font-size: 20px;
+            font-weight: bold;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+    </style>
+</head>
+<body>
+    
+
+<h1>Flex Container Example</h1>
+
+<div class="container">
+    <div class="item">item 1</div>
+    <div class="item">item 2</div>
+    <div class="item">item 3</div>
+    <div class="item">item 4</div>
+    <div class="item">item 5</div>
+    <div class="item">item 6</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Lab Reservation System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-5">
+
+    <div class="max-w-xl mx-auto bg-white p-6 border rounded">
+        <header class="text-center mb-6">
+            <h1 class="text-2xl font-bold">Computer Lab Reservation System</h1>
+            <p class="text-gray-600">Silakan isi formulir di bawah ini untuk melakukan pemesanan laboratorium komputer.</p>
+        </header>
+
+        <main>
+            <form action="#" method="POST">
+                
+                <div class="mb-4">
+                    <label for="borrower-name" class="block font-semibold mb-1">Nama Peminjam (Borrower's Name):</label>
+                    <input type="text" id="borrower-name" name="borrower_name" required class="w-full border p-2 rounded">
+                </div>
+
+                <div class="mb-4">
+                    <label class="block font-semibold mb-1">Status:</label>
+                    <div class="flex gap-4">
+                        <label>
+                            <input type="radio" id="teacher" name="status" value="Teacher" required> Teacher
+                        </label>
+                        <label>
+                            <input type="radio" id="student" name="status" value="Student"> Student
+                        </label>
+                        <label>
+                            <input type="radio" id="organization" name="status" value="Organization"> Organization
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="purpose" class="block font-semibold mb-1">Tujuan (Purpose):</label>
+                    <input type="text" id="purpose" name="purpose" placeholder="Practicum, Practice, OSIS Meeting, etc." required class="w-full border p-2 rounded">
+                 </div>
+
+                <div class="mb-4">
+                    <label for="borrowed-lab" class="block font-semibold mb-1">Laboratorium yang Dipinjam (Borrowed Lab):</label>
+                    <select id="borrowed-lab" name="borrowed_lab" required class="w-full border p-2 rounded bg-white">
+                        <option value="" disabled selected>-- Pilih Laboratorium --</option>
+                        <option value="Lab 1 (Software)">Lab 1 (Software)</option>
+                        <option value="Lab 2 (Hardware)">Lab 2 (Hardware)</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="date-of-use" class="block font-semibold mb-1">Tanggal Penggunaan (Date of Use):</label>
+                    <input type="date" id="date-of-use" name="date_of_use" required class="w-full border p-2 rounded">
+                </div>
+
+                <div class="mb-4">
+                    <label for="start-time" class="block font-semibold mb-1">Waktu Mulai (Start Time):</label>
+                    <input type="time" id="start-time" name="start_time" required class="w-full border p-2 rounded">
+                </div>
+
+                <div class="mb-4">
+                    <label for="end-time" class="block font-semibold mb-1">Waktu Selesai (End Time):</label>
+                    <input type="time" id="end-time" name="end_time" required class="w-full border p-2 rounded">
+                </div>
+
+                <div class="mb-4">
+                    <label for="participants" class="block font-semibold mb-1">Jumlah Peserta (Number of Participants):</label>
+                    <input type="number" id="participants" name="participants" min="1" required class="w-full border p-2 rounded">
+                </div>
+
+                <div class="mb-4">
+                    <label for="special-requirements" class="block font-semibold mb-1">Kebutuhan Khusus (Special Requirements):</label>
+                    <textarea id="special-requirements" name="special_requirements" rows="4" placeholder="Need internet access, need a projector, etc." class="w-full border p-2 rounded"></textarea>
+                </div>
+
+                <div class="mt-6">
+                    <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                        Submit Reservation
+                    </button>
+                </div>
+
+            </form>
+        </main>
+    </div>
+
+</body>
+</html>
